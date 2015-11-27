@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dssp.dhanrajnaik522.googleexample">
+
+    <uses-permission android:name="android.permission.INTERNET" />  <!--to access g+ apis -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" /><!--to access account name(email) as part of sign in -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" /><!-- To retrieve OAuth 2.0 tokens or invalidate tokens
+                                                                              to disconnect a user.This disconnect option is required
+                                                                              to comply with the Google+ Sign-In developer policies: -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--Add a meta-data tag as a child of the application tag to declare the version of Google Play services you are using -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+    <!--TODO:REFERENCE http://www.androidsources.com/index.php/2015/08/13/android-login-with-google-plus-using-android-studio/  -->
+
+</manifest>
